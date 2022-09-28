@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "type": "lldb",
+          "request": "launch",
+          "name": "Debug unit tests in library 'lilgrep'",
+          "cargo": {
+              "args": [
+                  "test",
+                  "--no-run",
+                  "--lib",
+                  "--package=lilgrep",
+                  "--",
+                  "env",
+                  "/home/doozy/Projects/learning/rs/rsgrep/src/main.rs"
+              ],
+              "filter": {
+                  "name": "lilgrep",
+                  "kind": "lib"
+              }
+          },
+          "args": [],
+          "cwd": "${workspaceFolder}"
+      }
+  ]
+}
